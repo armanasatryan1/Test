@@ -16,7 +16,7 @@ export const validateField = (field) => {
   if (field.id === 'email' && !field.value.trim().match(emailRegex)) {
     return emailFieldError;
   }
-  if (field.required && !field.value.trim().match(textRegex)) {
+  if (field.required && !field.value.trim().match(textRegex) && field.id !== 'phone' && field.id !== 'email') {
     return onlyTextAllowedError;
   }
 

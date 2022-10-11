@@ -7,7 +7,7 @@ import { validateFields } from './validation';
 import {getFields} from "./getFields";
 
 const useRegistration = () => {
-  const [registrationData, setregistrationData] = useGetUserFields();
+  const [registrationData, setRegistrationData] = useGetUserFields();
   const dispatch = useDispatch();
 
   let navigate = useNavigate();
@@ -27,7 +27,7 @@ const useRegistration = () => {
         }
         return item;
       });
-      setregistrationData(changedData);
+      setRegistrationData(changedData);
     };
   };
 
@@ -51,7 +51,7 @@ const useRegistration = () => {
       dispatch({ type: 'SIGN_UP', payload: { firstName, lastName } });
       navigate('../thanks', { replace: true });
     } else {
-      setregistrationData(validatedFields.fields);
+      setRegistrationData(validatedFields.fields);
     }
   };
 
